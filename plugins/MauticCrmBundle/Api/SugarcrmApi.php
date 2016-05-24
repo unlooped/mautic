@@ -86,6 +86,11 @@ class SugarcrmApi extends CrmApi
     {
         $tokenData = $this->integration->getKeys();
 
+        foreach ($fields as $name => $value) {
+            $fields[$name] = str_replace("&#13;&#10;","\n");
+            $fields[$name] = html_entity_decode($value, ENT_QUOTES);
+        }
+
         if ($tokenData['version'] == '6') {
             $leadFields = array();
             foreach ($fields as $name => $value) {
