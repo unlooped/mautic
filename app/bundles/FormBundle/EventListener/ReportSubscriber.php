@@ -78,7 +78,7 @@ class ReportSubscriber extends CommonSubscriber
                         'label' => 'mautic.form.report.page_id',
                         'type'  => 'int'
                     ),
-                    $pagePrefix . 'name'                 => array(
+                    $pagePrefix . 'title'                 => array(
                         'label' => 'mautic.form.report.page_name',
                         'type'  => 'string'
                     )
